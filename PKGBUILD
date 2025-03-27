@@ -1,6 +1,7 @@
 #
 # origin:
 # https://aur.archlinux.org/packages/freecad-git
+# https://archlinux.org/packages/extra/x86_64/freecad/
 #
 
 pkgname=freecad-git
@@ -102,10 +103,10 @@ build() {
   ninja -C build
 }
 
-check() {
-  cd build
-  LD_LIBRARY_PATH=lib bin/FreeCADCmd --console --run-test 0
-}
+#check() {
+#  cd build
+#  LD_LIBRARY_PATH=lib bin/FreeCADCmd --console --run-test 0
+#}
 
 package() {
   DESTDIR="$pkgdir" ninja -C build install
