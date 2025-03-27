@@ -120,7 +120,7 @@ package() {
   DESTDIR="$pkgdir" ninja -C build install
   
   # tools
-  install -Dm755 FreeCAD/src/Tools/{freecad-thumbnailer,fcinfo} -t "$pkgdir/usr/bin/"
+  #install -Dm755 FreeCAD/src/Tools/{freecad-thumbnailer,fcinfo} -t "$pkgdir/usr/bin/"
 
   # symlinks
   install -d "$pkgdir/usr/bin"
