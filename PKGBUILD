@@ -47,6 +47,7 @@ nlohmann-json
 shiboken6
 swig
 pybind11
+libspnav
 )
 checkdepends=(
 pugixml
