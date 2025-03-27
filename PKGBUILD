@@ -48,6 +48,7 @@ shiboken6
 swig
 pybind11
 libspnav
+ccache
 )
 checkdepends=(
 pugixml
