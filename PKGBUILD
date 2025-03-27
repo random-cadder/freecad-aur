@@ -82,21 +82,29 @@ prepare() {
 build() {
   cmake \
     -B build \
-    -D BUILD_FLAT_MESH=ON \
-    -D BUILD_DESIGNER_PLUGIN=ON \
-    -D FREECAD_QT_VERSION=6 \
-    -D FREECAD_USE_PCL=OFF \
+    \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects -fPIC -w" \
     -D CMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects -fPIC -w" \
+    -D CMAKE_INSTALL_BINDIR=/usr/lib/freecad/bin \
     -D CMAKE_INSTALL_DATADIR=/usr/share/freecad \
     -D CMAKE_INSTALL_DATAROOTDIR=/usr/share \
     -D CMAKE_INSTALL_DOCDIR=/usr/share/freecad/doc \
+    -D CMAKE_INSTALL_LIBDIR=/usr/lib/freecad/lib \
     -D CMAKE_INSTALL_PREFIX=/usr/lib/freecad \
+    \
+    -D BUILD_FLAT_MESH=ON \
+    -D BUILD_DESIGNER_PLUGIN=ON \
+    \
+    -D FREECAD_QT_VERSION=6 \
+    -D FREECAD_USE_PCL=OFF \
     -D FREECAD_USE_EXTERNAL_PIVY=ON \
     -D FREECAD_USE_QT_FILEDIALOG=ON \
+    \
+    -D PYTHON_EXECUTABLE=/usr/bin/python \
     -D INSTALL_TO_SITEPACKAGES=ON \
     -D ENABLE_DEVELOPER_TESTS=OFF \
+    \
     -G Ninja \
     -S FreeCAD \
     -W no-dev
