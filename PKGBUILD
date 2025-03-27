@@ -81,6 +81,7 @@ build() {
     -D BUILD_FLAT_MESH=ON \
     -D BUILD_DESIGNER_PLUGIN=ON \
     -D FREECAD_QT_VERSION=6 \
+    -D FREECAD_USE_PCL=OFF \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects -fPIC -w" \
     -D CMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects -fPIC -w" \
