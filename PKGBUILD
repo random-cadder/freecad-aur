@@ -46,6 +46,7 @@ ninja
 nlohmann-json
 shiboken6
 swig
+pybind11
 )
 checkdepends=(
 pugixml
