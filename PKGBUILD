@@ -84,7 +84,7 @@ build() {
   cmake \
     -B build \
     \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+    -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -D CMAKE_BUILD_TYPE=Release \
     -D CMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects -fPIC -w" \
     -D CMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects -fPIC -w" \
