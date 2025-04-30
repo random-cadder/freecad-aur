@@ -50,6 +50,7 @@ swig
 pybind11
 libspnav
 ccache
+hdf5
 )
 checkdepends=(
 pugixml
@@ -96,6 +97,10 @@ build() {
     \
     -D BUILD_FLAT_MESH=ON \
     -D BUILD_DESIGNER_PLUGIN=ON \
+    \
+    -D HDF5_NO_FIND_PACKAGE_CONFIG_FILE=ON \
+    -D HDF5_C_COMPILER_EXECUTABLE=h5hlcc \
+    -D HDF5_CXX_COMPILER_EXECUTABLE=h5hlc++ \
     \
     -D FREECAD_QT_VERSION=6 \
     -D FREECAD_USE_PCL=OFF \
